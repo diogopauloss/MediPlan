@@ -28,6 +28,6 @@ O MediPlan transforma a complexidade da gestão terapêutica numa experiência d
 
 ---
 ### Autores:
-Afonso Moisão 25912
-Diogo Paulos 26600
+Afonso Moisão 25912 <p>
+Diogo Paulos 26600 <p>
 Ricardo Manique 25907
