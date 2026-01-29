@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:elevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/activity_home_Greeting_text_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Olá!"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#424242"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/activity_home_Subtitle_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A carregar dados..."
+                android:textColor="#757575"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/activity_home_Greeting_text_view_id"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/activity_home_Profile_text_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:paddingBottom="16dp"
+            android:clipToPadding="false"
+            android:paddingStart="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/bg_calendar_day_unselected"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/activity_home_WeekDay1_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ONT"
+                        android:textColor="#757575"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/activity_home_MonthDay1_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15"
+                        android:textColor="#424242"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/bg_calendar_day_selected"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/activity_home_WeekDay2_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HOJE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/activity_home_MonthDay2_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="55dp"
+                    android:layout_height="75dp"
+                    android:background="@drawable/bg_calendar_day_unselected"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:id="@+id/activity_home_WeekDay3_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AMA"
+                        android:textColor="#757575"
+                        android:textSize="12sp"
+                        android:textAllCaps="true"/>
+
+                    <TextView
+                        android:id="@+id/activity_home_MonthDay3_text_view_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17"
+                        android:textColor="#424242"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_home_DailyMeds_recycler_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_medication_task"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_home_Add_floating_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#66BB6A"
+        app:tint="#FFFFFF"
+        android:layout_gravity="bottom|end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F8F9FA"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="201dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/mediplan_logo2"
+        app:tint="#9CCC65" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Bem Vindo "
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/activity_main_Email_edit_text_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Email:"
+                android:paddingLeft="15dp" />
+
+            <EditText
+                android:id="@+id/activity_main_Password_edit_text_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:hint="Palavra passe:"
+                android:inputType="textPassword"
+                android:paddingLeft="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="20dp"
+                android:text="Esqueces-te a palavra passe?"
+                android:textColor="#9CCC65" />
+
+            <Button
+                android:id="@+id/activity_main_Login_button_id"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:backgroundTint="#9CCC65"
+                android:text="Entrar"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/activity_main_Create_Account_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ainda não tens conta? Regista-te " />
+
+</LinearLayout>

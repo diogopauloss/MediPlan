@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#F5F5F5">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="201dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/mediplan_logo2"
+        app:tint="#9CCC65" />
+
+    <TextView
+        android:id="@+id/activity_profile_ProfileName_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Utilizador"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/activity_profile_Logout_button_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Terminar Sessão"
+        android:backgroundTint="#FFB74D"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/activity_profile_DeleteAccount_button_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Eliminar Conta"
+        android:backgroundTint="#E57373" />
+
+</LinearLayout>

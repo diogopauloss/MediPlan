@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_medication_task_Time_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="08:00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_medication_task_TimePeriod_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peq. Almoço"
+            android:textSize="12sp"
+            android:textColor="#9E9E9E"
+            app:layout_constraintTop_toBottomOf="@id/item_medication_task_Time_text_view_id"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="#EEEEEE"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/item_medication_task_TimePeriod_text_view_id"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/item_medication_task_MedName_text_view_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ibuprofeno"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#424242"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/item_medication_task_Done_check_box_id"/>
+
+        <TextView
+            android:id="@+id/item_medication_task_Dosage_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Comprimido (600mg)"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/item_medication_task_MedName_text_view_id"
+            app:layout_constraintTop_toBottomOf="@id/item_medication_task_MedName_text_view_id"/>
+
+        <CheckBox
+            android:id="@+id/item_medication_task_Done_check_box_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#66BB6A"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

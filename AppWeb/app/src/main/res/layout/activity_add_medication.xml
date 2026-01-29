@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/activity_add_medication_SelectedMedName_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Medicamento"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#66BB6A"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/activity_add_medication_Instruction_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quando vais tomar?"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_SelectedMedName_text_view_id"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/activity_add_medication_GroupTimes_chip_group_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_Instruction_text_view_id">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/activity_add_medication_Breakfast_chip_id"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peq. Almoço"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/activity_add_medication_Lunch_chip_id"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Almoço"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/activity_add_medication_Dinner_chip_id"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jantar"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/activity_add_medication_Bedtime_chip_id"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ao Deitar"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/activity_add_medication_DurationTitle_text_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duração do tratamento"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_GroupTimes_chip_group_id"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/activity_add_medication_Chronic_switch_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uso Contínuo (Crónico)"
+            android:checked="false"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_DurationTitle_text_view_id"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/activity_add_medication_EndDate_text_field_id"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Fim"
+            app:endIconDrawable="@android:drawable/ic_menu_my_calendar"
+            app:endIconMode="custom"
+            app:boxStrokeColor="#66BB6A"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_Chronic_switch_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/activity_add_medication_EndDate_text_field_text_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/activity_add_medication_SaveMed_button_id"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Adicionar ao Plano"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp"
+            android:backgroundTint="#81C784"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/activity_add_medication_EndDate_text_field_id"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
